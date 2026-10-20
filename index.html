@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -6,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Balum | Experiências para eventos</title>
-  <meta name="description" content="Conheça as experiências da Balum e transforme momentos em lembranças especiais.">
+  <meta name="description" content="Transformando momentos em experiências. Conheça os produtos da Balum Entertainment.">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -45,19 +44,19 @@
       text-decoration: none;
     }
 
-    button {
-      font: inherit;
-    }
-
     img {
       display: block;
       max-width: 100%;
     }
 
-    /* MENU SUPERIOR */
+    button, input, textarea {
+      font: inherit;
+    }
+
+    /* MENU */
 
     .navbar {
-      height: 57px;
+      min-height: 57px;
       padding: 0 10.3%;
       display: flex;
       align-items: center;
@@ -101,7 +100,6 @@
     .buy-button {
       min-width: 76px;
       padding: 9px 17px;
-      margin-left: 280px;
     }
 
     .button-black:hover,
@@ -184,7 +182,7 @@
       background: #e7e0d7;
     }
 
-    /* CABEÇALHO DAS SEÇÕES */
+    /* TÍTULOS DAS SEÇÕES */
 
     .section-heading {
       display: flex;
@@ -341,7 +339,7 @@
       letter-spacing: 1px;
     }
 
-    /* BOTÃO FLUTUANTE WHATSAPP */
+    /* WHATSAPP FLUTUANTE */
 
     .whatsapp-float {
       position: fixed;
@@ -366,15 +364,11 @@
       transform: scale(1.07);
     }
 
-    /* CELULAR */
+    /* RESPONSIVIDADE */
 
     @media (max-width: 900px) {
       .navbar {
         padding: 0 5%;
-      }
-
-      .buy-button {
-        margin-left: 0;
       }
 
       .hero {
@@ -408,7 +402,6 @@
 
     @media (max-width: 600px) {
       .navbar {
-        height: auto;
         min-height: 65px;
         flex-wrap: wrap;
         gap: 12px;
@@ -425,10 +418,6 @@
 
       .nav-links a {
         white-space: nowrap;
-      }
-
-      .buy-button {
-        margin-left: auto;
       }
 
       .hero {
@@ -546,10 +535,10 @@
         </div>
       </div>
 
-      <!-- Troque pelo caminho da sua foto principal -->
+      <!-- FOTO PRINCIPAL DE DECORAÇÃO DE EVENTO -->
       <img
         class="hero-image"
-        src="imagens/hero.jpg"
+        src="https://images.pexels.com/photos/5716280/pexels-photo-5716280.jpeg"
         alt="Decoração de evento Balum">
     </section>
 
@@ -568,7 +557,7 @@
       <article class="product-card">
         <img
           class="product-image"
-          src="imagens/cabine-revista.jpg"
+          src="https://www.clicksvipcabine.com.br/wp-content/uploads/2025/02/Cabine-de-fotos-capa-de-revista-2.webp"
           alt="Cabine Fotográfica Capa de Revista">
 
         <div class="product-info">
@@ -609,7 +598,7 @@
       <article class="product-card">
         <img
           class="product-image"
-          src="imagens/espelho-infinito.jpg"
+          src="https://placehold.co/900x900/050505/19e6c1?text=Espelho+Infinito"
           alt="Cabine de Espelho Infinito">
 
         <div class="product-info">
@@ -659,9 +648,17 @@
       </div>
 
       <div class="gallery-grid">
-        <img src="imagens/galeria-1.jpg" alt="Evento Balum 1">
-        <img src="imagens/galeria-2.jpg" alt="Evento Balum 2">
-        <img src="imagens/galeria-3.jpg" alt="Evento Balum 3">
+        <img
+          src="https://images.pexels.com/photos/5716280/pexels-photo-5716280.jpeg"
+          alt="Decoração de evento">
+
+        <img
+          src="https://www.clicksvipcabine.com.br/wp-content/uploads/2025/02/Cabine-de-fotos-capa-de-revista-2.webp"
+          alt="Cabine fotográfica">
+
+        <img
+          src="https://placehold.co/700x700/050505/19e6c1?text=Espelho+Infinito"
+          alt="Espelho infinito">
       </div>
     </section>
 
@@ -699,7 +696,7 @@
 
   <!-- WHATSAPP FLUTUANTE -->
   <a
-    class="whatsapp-float"
+    class="whatsapp-float whatsapp-link"
     href="#"
     aria-label="Falar com a Balum pelo WhatsApp"
     data-message="Olá! Vim pelo site da Balum e gostaria de mais informações.">
@@ -707,29 +704,28 @@
   </a>
 
   <script>
-    // Número oficial do WhatsApp da Balum
+    // WhatsApp da Balum
     const WHATSAPP = "5512992032826";
 
-    // Atualiza o ano no rodapé
+    // Ano automático no rodapé
     document.getElementById("year").textContent =
       new Date().getFullYear();
 
-    // Configura todos os botões do WhatsApp
-    document.querySelectorAll(".whatsapp-link, .whatsapp-float")
-      .forEach(function (link) {
-        const mensagem =
-          link.dataset.message ||
-          "Olá! Gostaria de informações sobre a Balum.";
+    // Configura todos os links de contato
+    document.querySelectorAll(".whatsapp-link").forEach(function(link) {
+      const mensagem =
+        link.dataset.message ||
+        "Olá! Gostaria de informações sobre a Balum.";
 
-        link.href =
-          "https://wa.me/" +
-          WHATSAPP +
-          "?text=" +
-          encodeURIComponent(mensagem);
+      link.href =
+        "https://wa.me/" +
+        WHATSAPP +
+        "?text=" +
+        encodeURIComponent(mensagem);
 
-        link.target = "_blank";
-        link.rel = "noopener noreferrer";
-      });
+      link.target = "_blank";
+      link.rel = "noopener noreferrer";
+    });
   </script>
 
 </body>
