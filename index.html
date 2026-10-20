@@ -1,9 +1,9 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <title>Balum | Experiências para eventos</title>
   <meta name="description" content="Transformando momentos em experiências. Conheça os produtos da Balum Entertainment.">
 
@@ -14,8 +14,8 @@
   <style>
     :root {
       --background: #f7f5f1;
-      --white: #ffffff;
-      --black: #111111;
+      --white: #fff;
+      --black: #111;
       --text: #242321;
       --muted: #77736e;
       --border: #e5e0d9;
@@ -49,24 +49,21 @@
       max-width: 100%;
     }
 
-    button, input, textarea {
-      font: inherit;
-    }
-
     /* MENU */
 
     .navbar {
-      min-height: 57px;
+      min-height: 65px;
       padding: 0 10.3%;
       display: flex;
       align-items: center;
       justify-content: space-between;
+      gap: 20px;
       border-bottom: 1px solid var(--border);
       background: var(--background);
     }
 
     .brand {
-      font-size: 17px;
+      font-size: 19px;
       font-weight: 700;
       letter-spacing: 1px;
     }
@@ -75,11 +72,11 @@
       display: flex;
       align-items: center;
       gap: 25px;
-      font-size: 11px;
+      font-size: 12px;
     }
 
-    .nav-links a:not(.buy-button):hover {
-      opacity: .55;
+    .nav-links a:hover {
+      opacity: .6;
     }
 
     .buy-button,
@@ -98,8 +95,7 @@
     }
 
     .buy-button {
-      min-width: 76px;
-      padding: 9px 17px;
+      padding: 10px 20px;
     }
 
     .button-black:hover,
@@ -113,7 +109,7 @@
       align-items: center;
       justify-content: center;
       min-height: 43px;
-      padding: 0 17px;
+      padding: 0 18px;
       border: 1px solid var(--black);
       border-radius: 50px;
       font-size: 12px;
@@ -133,13 +129,13 @@
       display: grid;
       grid-template-columns: 1.05fr .95fr;
       align-items: center;
-      gap: 65px;
+      gap: 55px;
       padding: 55px 10.3% 65px;
     }
 
     .eyebrow {
       margin-bottom: 17px;
-      font-size: 9px;
+      font-size: 10px;
       font-weight: 500;
       letter-spacing: 2.5px;
       text-transform: uppercase;
@@ -151,8 +147,8 @@
       font-family: "Playfair Display", serif;
       font-size: clamp(43px, 5.2vw, 63px);
       font-weight: 400;
-      line-height: .99;
-      letter-spacing: -2.5px;
+      line-height: 1.04;
+      letter-spacing: -2px;
     }
 
     .hero-description {
@@ -160,18 +156,18 @@
       margin-bottom: 25px;
       color: var(--muted);
       font-size: 13px;
-      line-height: 1.65;
+      line-height: 1.8;
     }
 
     .hero-buttons {
       display: flex;
       flex-wrap: wrap;
-      gap: 9px;
+      gap: 10px;
     }
 
     .button-black {
       min-height: 43px;
-      padding: 0 18px;
+      padding: 0 19px;
     }
 
     .hero-image {
@@ -182,7 +178,7 @@
       background: #e7e0d7;
     }
 
-    /* TÍTULOS DAS SEÇÕES */
+    /* TÍTULOS */
 
     .section-heading {
       display: flex;
@@ -203,8 +199,8 @@
     .section-heading p {
       max-width: 310px;
       color: var(--muted);
-      font-size: 11px;
-      line-height: 1.7;
+      font-size: 12px;
+      line-height: 1.8;
     }
 
     /* PRODUTOS */
@@ -243,7 +239,7 @@
       margin-bottom: 15px;
       font-family: "Playfair Display", serif;
       font-size: clamp(28px, 3vw, 34px);
-      line-height: 1.35;
+      line-height: 1.3;
       font-weight: 400;
       letter-spacing: -.6px;
     }
@@ -251,8 +247,8 @@
     .product-description {
       margin-bottom: 19px;
       color: var(--muted);
-      font-size: 11.5px;
-      line-height: 1.7;
+      font-size: 12px;
+      line-height: 1.8;
     }
 
     .product-details {
@@ -263,7 +259,7 @@
     .detail {
       padding: 11px 0;
       border-bottom: 1px solid var(--border);
-      font-size: 10.5px;
+      font-size: 11px;
     }
 
     .detail strong {
@@ -339,7 +335,7 @@
       letter-spacing: 1px;
     }
 
-    /* WHATSAPP FLUTUANTE */
+    /* WHATSAPP */
 
     .whatsapp-float {
       position: fixed;
@@ -352,7 +348,7 @@
       align-items: center;
       justify-content: center;
       border-radius: 50%;
-      background: #20d366;
+      background: #20c767;
       color: white;
       font-size: 14px;
       font-weight: 700;
@@ -368,16 +364,16 @@
 
     @media (max-width: 900px) {
       .navbar {
-        padding: 0 5%;
+        padding: 15px 5%;
       }
 
       .hero {
         padding: 55px 6%;
-        gap: 35px;
+        gap: 30px;
       }
 
       .hero h1 {
-        font-size: 48px;
+        font-size: 46px;
       }
 
       .hero-image {
@@ -423,11 +419,11 @@
       .hero {
         grid-template-columns: 1fr;
         gap: 30px;
-        padding: 60px 6% 45px;
+        padding: 55px 6% 45px;
       }
 
       .hero h1 {
-        font-size: clamp(45px, 12vw, 58px);
+        font-size: clamp(44px, 12vw, 58px);
       }
 
       .hero-image {
@@ -496,7 +492,6 @@
 
 <body>
 
-  <!-- MENU -->
   <header class="navbar">
     <a class="brand" href="#inicio">Balum</a>
 
@@ -511,21 +506,21 @@
 
   <main>
 
-    <!-- INÍCIO -->
+    <!-- INÍCIO: DECORAÇÃO DO EVENTO -->
     <section class="hero" id="inicio">
       <div class="hero-content">
-        <div class="eyebrow">Conheça nosso produto</div>
+        <div class="eyebrow">Conheça nossos produtos</div>
 
         <h1>Transformando momentos em experiências.</h1>
 
         <p class="hero-description">
-          Uma apresentação simples, elegante e direta para mostrar
-          seu produto aos clientes e levá-los para o WhatsApp
-          na hora da compra.
+          Experiências especiais para tornar cada evento único.
+          Conheça as soluções da Balum Entertainment e transforme
+          seus momentos em lembranças inesquecíveis.
         </p>
 
         <div class="hero-buttons">
-          <a class="button-black" href="#produtos">Ver produto</a>
+          <a class="button-black" href="#produtos">Ver produtos</a>
 
           <a class="button-outline whatsapp-link"
              href="#"
@@ -535,25 +530,24 @@
         </div>
       </div>
 
-      <!-- FOTO PRINCIPAL DE DECORAÇÃO DE EVENTO -->
       <img
         class="hero-image"
         src="https://images.pexels.com/photos/5716280/pexels-photo-5716280.jpeg"
         alt="Decoração de evento Balum">
     </section>
 
-    <!-- PRODUTOS -->
+    <!-- NOSSOS PRODUTOS -->
     <section class="products" id="produtos">
       <div class="section-heading">
         <h2>Nossos Produtos</h2>
 
         <p>
-          Veja os detalhes e, quando estiver pronto,
-          fale diretamente conosco pelo WhatsApp.
+          Conheça nossas experiências e solicite informações
+          sobre disponibilidade e aluguel.
         </p>
       </div>
 
-      <!-- PRODUTO 1 -->
+      <!-- PRODUTO 1: CABINE CAPA DE REVISTA -->
       <article class="product-card">
         <img
           class="product-image"
@@ -564,11 +558,11 @@
           <h3>Cabine Fotográfica Capa de Revista</h3>
 
           <p class="product-description">
-            A nossa Cabine Fotográfica Capa de Revista transforma
-            qualquer celebração num momento inesquecível. Com
-            iluminação profissional e design de luxo, os seus
-            convidados tiram fotos incríveis e dignas de capa,
-            garantindo destaque e engajamento nas redes sociais.
+            Nossa Cabine Fotográfica Capa de Revista transforma
+            qualquer celebração em um momento inesquecível.
+            Com iluminação profissional e um visual elegante,
+            seus convidados podem criar fotos incríveis e
+            compartilhar lembranças especiais.
           </p>
 
           <div class="product-details">
@@ -581,7 +575,7 @@
             </div>
 
             <div class="detail">
-              <strong>Pedido:</strong> Atendimento direto
+              <strong>Contratação:</strong> Atendimento direto
             </div>
           </div>
 
@@ -594,22 +588,21 @@
         </div>
       </article>
 
-      <!-- PRODUTO 2 -->
+      <!-- PRODUTO 2: ESPELHO INFINITO -->
       <article class="product-card">
         <img
           class="product-image"
-          src="https://placehold.co/900x900/050505/19e6c1?text=Espelho+Infinito"
+          src="imagens/espelho-infinito.jpg"
           alt="Cabine de Espelho Infinito">
 
         <div class="product-info">
           <h3>Cabine de Espelho Infinito</h3>
 
           <p class="product-description">
-            Crie a ilusão de um túnel de luzes sem fim no seu evento.
-            Com luzes LED e um efeito tridimensional hipnotizante,
-            o nosso Espelho Infinito garante fotos e vídeos
-            espetaculares, transformando qualquer festa ou evento
-            corporativo num cenário moderno e altamente partilhável.
+            Crie um cenário visual impressionante no seu evento.
+            Com luzes LED e um efeito de profundidade envolvente,
+            o Espelho Infinito transforma fotos e vídeos em
+            lembranças especiais para festas e eventos corporativos.
           </p>
 
           <div class="product-details">
@@ -622,7 +615,7 @@
             </div>
 
             <div class="detail">
-              <strong>Pedido:</strong> Atendimento direto
+              <strong>Contratação:</strong> Atendimento direto
             </div>
           </div>
 
@@ -642,8 +635,8 @@
         <h2>Galeria</h2>
 
         <p>
-          Conheça de perto as experiências e os detalhes
-          dos nossos produtos.
+          Inspire-se e conheça um pouco mais das experiências
+          que a Balum oferece.
         </p>
       </div>
 
@@ -654,11 +647,11 @@
 
         <img
           src="https://www.clicksvipcabine.com.br/wp-content/uploads/2025/02/Cabine-de-fotos-capa-de-revista-2.webp"
-          alt="Cabine fotográfica">
+          alt="Cabine Fotográfica Capa de Revista">
 
         <img
-          src="https://placehold.co/700x700/050505/19e6c1?text=Espelho+Infinito"
-          alt="Espelho infinito">
+          src="imagens/espelho-infinito.jpg"
+          alt="Cabine de Espelho Infinito">
       </div>
     </section>
 
@@ -669,7 +662,7 @@
       <h2>Momentos que ficam para sempre.</h2>
 
       <p>
-        A Balum cria experiências especiais para eventos,
+        A Balum Entertainment oferece experiências para eventos,
         combinando criatividade, tecnologia e atenção aos detalhes.
         Nosso objetivo é transformar ocasiões importantes em
         lembranças únicas para você e seus convidados.
@@ -704,14 +697,14 @@
   </a>
 
   <script>
-    // WhatsApp da Balum
+    // Número de WhatsApp da Balum
     const WHATSAPP = "5512992032826";
 
-    // Ano automático no rodapé
+    // Atualiza o ano automaticamente
     document.getElementById("year").textContent =
       new Date().getFullYear();
 
-    // Configura todos os links de contato
+    // Configura todos os botões de contato
     document.querySelectorAll(".whatsapp-link").forEach(function(link) {
       const mensagem =
         link.dataset.message ||
