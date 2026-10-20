@@ -1,492 +1,626 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Conheça nossos produtos e fale conosco pelo WhatsApp.">
-  <title>Balum | Transformando momentos em experiências</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BALUM Entertainment</title>
 
-  <style>
-    :root{
-      --bg:#f7f5f1;
-      --surface:#ffffff;
-      --text:#171717;
-      --muted:#6e6a64;
-      --accent:#111111;
-      --line:#e8e4de;
-      --whatsapp:#25D366;
-      --max:1180px;
-    }
+<style>
+:root {
+  --bg: #080910;
+  --card: #121420;
+  --purple: #8b5cf6;
+  --blue: #38bdf8;
+  --text: #f5f5ff;
+  --muted: #a4a6ba;
+}
 
-    *{box-sizing:border-box;margin:0;padding:0}
-    html{scroll-behavior:smooth}
-    body{
-      font-family:Arial, Helvetica, sans-serif;
-      background:var(--bg);
-      color:var(--text);
-      line-height:1.5;
-    }
-    img{max-width:100%;display:block}
-    a{text-decoration:none;color:inherit}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
 
-    .container{
-      width:min(var(--max),92%);
-      margin:auto;
-    }
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+}
 
-    header{
-      position:sticky;
-      top:0;
-      z-index:20;
-      background:rgba(247,245,241,.94);
-      backdrop-filter:blur(12px);
-      border-bottom:1px solid rgba(0,0,0,.06);
-    }
+a {
+  text-decoration: none;
+  color: inherit;
+}
 
-    .nav{
-      min-height:76px;
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:25px;
-    }
+.container {
+  width: min(1100px, 90%);
+  margin: auto;
+}
 
-    .brand{
-      font-size:20px;
-      font-weight:800;
-      letter-spacing:.5px;
-    }
+header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: rgba(8, 9, 16, .94);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid #242536;
+}
 
-    .nav-links{
-      display:flex;
-      gap:28px;
-      align-items:center;
-      font-size:14px;
-    }
+nav {
+  min-height: 76px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
 
-    .nav-links a:hover{opacity:.6}
+.logo {
+  font-size: 21px;
+  font-weight: 900;
+  letter-spacing: 2px;
+}
 
-    .nav-cta{
-      background:#111;
-      color:#fff;
-      padding:12px 18px;
-      border-radius:999px;
-      font-weight:700;
-      font-size:14px;
-    }
+.logo span {
+  color: var(--purple);
+}
 
-    .hero{
-      min-height:78vh;
-      display:grid;
-      grid-template-columns:1.05fr .95fr;
-      align-items:center;
-      gap:60px;
-      padding:75px 0;
-    }
+.links {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
 
-    .eyebrow{
-      text-transform:uppercase;
-      letter-spacing:2px;
-      font-size:12px;
-      color:var(--muted);
-      margin-bottom:18px;
-      font-weight:700;
-    }
+.links a {
+  color: var(--muted);
+  font-size: 13px;
+  transition: .2s;
+}
 
-    h1{
-      font-family:Georgia, "Times New Roman", serif;
-      font-size:clamp(44px,6vw,82px);
-      line-height:.98;
-      font-weight:500;
-      letter-spacing:-3px;
-      margin-bottom:25px;
-    }
+.links a:hover {
+  color: white;
+}
 
-    .hero p{
-      max-width:560px;
-      color:var(--muted);
-      font-size:18px;
-      margin-bottom:32px;
-    }
+.btn {
+  display: inline-block;
+  padding: 12px 20px;
+  border-radius: 9px;
+  background: linear-gradient(110deg, var(--purple), #5267ed);
+  color: white;
+  font-weight: bold;
+  border: 0;
+  cursor: pointer;
+  transition: .2s;
+}
 
-    .buttons{
-      display:flex;
-      flex-wrap:wrap;
-      gap:12px;
-    }
+.btn:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.15);
+}
 
-    .btn{
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      padding:15px 23px;
-      border-radius:999px;
-      font-weight:700;
-      border:1px solid #111;
-      transition:.2s;
-      cursor:pointer;
-    }
+.btn-outline {
+  background: transparent;
+  border: 1px solid #56516f;
+}
 
-    .btn-primary{
-      background:#111;
-      color:#fff;
-    }
+.hero {
+  text-align: center;
+  padding: 115px 0 100px;
+  background:
+    radial-gradient(ellipse at 50% 20%, #4c24864d, transparent 55%),
+    radial-gradient(ellipse at 80% 70%, #124b6b30, transparent 45%);
+}
 
-    .btn-primary:hover{transform:translateY(-2px);opacity:.9}
-    .btn-secondary:hover{background:#111;color:#fff}
+.tag {
+  color: #c4a8ff;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 3px;
+  margin-bottom: 20px;
+}
 
-    .hero-image{
-      min-height:560px;
-      border-radius:28px;
-      background:
-        linear-gradient(135deg,rgba(0,0,0,.04),rgba(0,0,0,.12)),
-        #ddd8d0;
-      overflow:hidden;
-      position:relative;
-    }
+.hero h1 {
+  font-size: clamp(36px, 6vw, 65px);
+  line-height: 1.12;
+  max-width: 850px;
+  margin: 0 auto 22px;
+}
 
-    .hero-image img{
-      width:100%;
-      height:100%;
-      min-height:560px;
-      object-fit:cover;
-    }
+.gradient {
+  background: linear-gradient(90deg, #c4a5ff, #55caff);
+  color: transparent;
+  background-clip: text;
+}
 
-    .placeholder{
-      min-height:560px;
-      display:grid;
-      place-items:center;
-      padding:30px;
-      text-align:center;
-      color:#777;
-    }
+.hero p {
+  color: var(--muted);
+  max-width: 600px;
+  margin: 0 auto 30px;
+}
 
-    section{padding:95px 0}
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
 
-    .section-head{
-      display:flex;
-      justify-content:space-between;
-      align-items:end;
-      gap:30px;
-      margin-bottom:40px;
-    }
+section {
+  padding: 85px 0;
+  scroll-margin-top: 75px;
+}
 
-    .section-head h2{
-      font-family:Georgia,serif;
-      font-size:clamp(34px,4vw,54px);
-      font-weight:500;
-      line-height:1;
-    }
+.section-title {
+  text-align: center;
+  margin-bottom: 42px;
+}
 
-    .section-head p{
-      color:var(--muted);
-      max-width:430px;
-    }
+.section-title h2 {
+  font-size: clamp(28px, 4vw, 38px);
+  margin: 8px 0;
+}
 
-    .product-card{
-      display:grid;
-      grid-template-columns:1fr 1fr;
-      background:var(--surface);
-      border:1px solid var(--line);
-      border-radius:28px;
-      overflow:hidden;
-      margin-bottom:40px;
-    }
+.section-title p,
+.muted {
+  color: var(--muted);
+}
 
-    .product-photo{
-      min-height:540px;
-      background:#e6e1d9;
-    }
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+}
 
-    .product-photo img{
-      width:100%;
-      height:100%;
-      min-height:540px;
-      object-fit:cover;
-    }
+.card {
+  background: linear-gradient(145deg, #171927, #0f1019);
+  border: 1px solid #282a40;
+  border-radius: 17px;
+  overflow: hidden;
+  transition: .25s;
+}
 
-    .product-info{
-      padding:55px;
-      display:flex;
-      flex-direction:column;
-      justify-content:center;
-    }
+.card:hover {
+  transform: translateY(-5px);
+  border-color: var(--purple);
+}
 
-    .product-info h3{
-      font-family:Georgia,serif;
-      font-size:42px;
-      font-weight:500;
-      margin-bottom:15px;
-    }
+.card-image {
+  height: 210px;
+  display: grid;
+  place-items: center;
+  background:
+    radial-gradient(circle at center, #643caa55, transparent 65%),
+    #10121f;
+  font-size: 62px;
+}
 
-    .product-info p{
-      color:var(--muted);
-      margin-bottom:25px;
-    }
+.card-content {
+  padding: 24px;
+}
 
-    .details{
-      list-style:none;
-      border-top:1px solid var(--line);
-      margin-bottom:28px;
-    }
+.card h3 {
+  font-size: 21px;
+  margin-bottom: 9px;
+}
 
-    .details li{
-      padding:13px 0;
-      border-bottom:1px solid var(--line);
-      font-size:14px;
-    }
+.card p {
+  color: var(--muted);
+  font-size: 14px;
+  margin-bottom: 20px;
+}
 
-    .showcase{
-      display:grid;
-      grid-template-columns:repeat(3,1fr);
-      gap:18px;
-    }
+.product {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  align-items: center;
+}
 
-    .showcase figure{
-      background:#ddd8d0;
-      border-radius:20px;
-      overflow:hidden;
-      aspect-ratio:1/1;
-    }
+.product-visual {
+  min-height: 330px;
+  border-radius: 20px;
+  border: 1px solid #302449;
+  background:
+    radial-gradient(circle at 50% 50%, #8b5cf655, transparent 60%),
+    linear-gradient(135deg, #171426, #101827);
+  display: grid;
+  place-items: center;
+  font-size: 100px;
+}
 
-    .showcase img{
-      width:100%;
-      height:100%;
-      object-fit:cover;
-    }
+.product h2 {
+  font-size: clamp(29px, 4vw, 42px);
+  line-height: 1.2;
+  margin: 12px 0 18px;
+}
 
-    .about{
-      background:#111;
-      color:#fff;
-      border-radius:32px;
-      padding:65px;
-      display:grid;
-      grid-template-columns:1fr 1fr;
-      gap:60px;
-    }
+.features {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin: 25px 0;
+}
 
-    .about h2{
-      font-family:Georgia,serif;
-      font-size:50px;
-      font-weight:500;
-      line-height:1;
-    }
+.feature {
+  background: #141522;
+  padding: 12px;
+  border-radius: 9px;
+  font-size: 14px;
+}
 
-    .about p{
-      color:#c8c8c8;
-      font-size:17px;
-      margin-bottom:25px;
-    }
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin-top: 35px;
+}
 
-    footer{
-      padding:45px 0;
-      border-top:1px solid var(--line);
-      margin-top:20px;
-    }
+.gallery img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 1px solid #292a3b;
+}
 
-    .footer-inner{
-      display:flex;
-      justify-content:space-between;
-      gap:20px;
-      color:var(--muted);
-      font-size:13px;
-    }
+.platform-box {
+  max-width: 600px;
+  margin: auto;
+  padding: 35px;
+  text-align: center;
+  border-radius: 18px;
+  background: var(--card);
+  border: 1px solid #2a2c43;
+}
 
-    .whatsapp{
-      position:fixed;
-      right:22px;
-      bottom:22px;
-      z-index:30;
-      width:58px;
-      height:58px;
-      border-radius:50%;
-      display:grid;
-      place-items:center;
-      background:var(--whatsapp);
-      color:#fff;
-      box-shadow:0 8px 25px rgba(0,0,0,.2);
-      font-size:25px;
-      font-weight:800;
-    }
+.platform-box input,
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  margin: 8px 0;
+  padding: 13px;
+  border-radius: 8px;
+  border: 1px solid #34364b;
+  background: #0b0c14;
+  color: white;
+  font: inherit;
+}
 
-    @media(max-width:800px){
-      .nav-links{display:none}
-      .hero,
-      .product-card,
-      .about{
-        grid-template-columns:1fr;
-      }
-      .hero{
-        padding:50px 0;
-        gap:35px;
-      }
-      .hero-image,.hero-image img{min-height:390px}
-      .product-photo,.product-photo img{min-height:400px}
-      .product-info{padding:35px 25px}
-      .about{padding:40px 25px}
-      .about h2{font-size:40px}
-      .showcase{grid-template-columns:1fr}
-      section{padding:65px 0}
-      .section-head{display:block}
-      .section-head p{margin-top:15px}
-      .footer-inner{flex-direction:column}
-    }
-  </style>
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+.contact-form {
+  padding: 25px;
+  border-radius: 16px;
+  background: var(--card);
+  border: 1px solid #282a40;
+}
+
+footer {
+  border-top: 1px solid #242536;
+  padding: 28px 0;
+  text-align: center;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+@media (max-width: 760px) {
+  nav {
+    padding: 17px 0;
+    flex-wrap: wrap;
+  }
+
+  .links {
+    width: 100%;
+    overflow-x: auto;
+    padding: 5px 0;
+  }
+
+  .links a {
+    white-space: nowrap;
+  }
+
+  .cards,
+  .product,
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .product-visual {
+    min-height: 250px;
+  }
+
+  .gallery {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .gallery img {
+    height: 140px;
+  }
+
+  .hero {
+    padding: 80px 0;
+  }
+
+  section {
+    padding: 60px 0;
+  }
+}
+</style>
 </head>
 
 <body>
 
 <header>
-  <div class="container nav">
-    <a href="#" class="brand">Balum</a>
+  <nav class="container">
+    <a href="#inicio" class="logo">BALUM<span>.</span></a>
 
-    <nav class="nav-links">
-      <a href="#produto">Produto</a>
-      <a href="#galeria">Galeria</a>
-      <a href="#sobre">Sobre</a>
-    </nav>
-
-    <a class="nav-cta" href="https://wa.me/5512992032826?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20seus%20produtos." target="_blank">
-      Comprar
-    </a>
-  </div>
+    <div class="links">
+      <a href="#inicio">Início</a>
+      <a href="#produtos">Experiências</a>
+      <a href="#led">Túnel de LED</a>
+      <a href="#cabine">Cabine de Fotos</a>
+      <a href="#plataforma">Plataforma</a>
+      <a href="#contato">Contato</a>
+    </div>
+  </nav>
 </header>
 
 <main>
+  <section class="hero" id="inicio">
+    <div class="container">
+      <div class="tag">EXPERIÊNCIAS • TECNOLOGIA • MEMÓRIAS</div>
 
-  <section class="container hero">
-    <div>
-      <div class="eyebrow">Conheça nosso produto</div>
-      <h1>Transformando momentos em experiências.</h1>
+      <h1>
+        Transformando momentos em
+        <span class="gradient">experiências inesquecíveis.</span>
+      </h1>
+
       <p>
-        Uma apresentação simples, elegante e direta para mostrar seu produto
-        aos clientes e levá-los para o WhatsApp na hora da compra.
+        Experiências visuais e interativas para tornar cada evento único.
+        Conheça as soluções da BALUM Entertainment.
       </p>
 
       <div class="buttons">
-        <a class="btn btn-primary" href="#produto">Ver produto</a>
-        <a class="btn btn-secondary" href="https://wa.me/5512992032826?text=Olá!%20Quero%20alugar%20a%20cabine%20de%20led." target="_blank">
-          Falar no WhatsApp
-        </a>
+        <a class="btn" href="#produtos">Conhecer experiências</a>
+        <a class="btn btn-outline" href="#contato">Fale conosco</a>
       </div>
-    </div>
-
-    <div class="hero-image">
-      <img src="https://images.pexels.com/photos/5716280/pexels-photo-5716280.jpeg" alt="Pessoas comemorando em uma festa com confetes no chão">
     </div>
   </section>
 
-  <section id="produto">
+  <section id="produtos">
     <div class="container">
-      <div class="section-head">
-        <h2>Nossos Produtos</h2>
-        <p>Veja os detalhes e, quando estiver pronto, fale diretamente conosco pelo WhatsApp.</p>
+      <div class="section-title">
+        <div class="tag">NOSSAS SOLUÇÕES</div>
+        <h2>Experiências BALUM</h2>
+        <p>Soluções para eventos inesquecíveis.</p>
       </div>
 
-      <!-- PRODUTO 1: Cabine Fotográfica Capa de Revista -->
-      <div class="product-card">
-        <div class="product-photo">
-          <img src="https://www.clicksvipcabine.com.br/wp-content/uploads/2025/02/Cabine-de-fotos-capa-de-revista-2.webp" alt="Cabine Fotográfica Capa de Revista">
-        </div>
+      <div class="cards">
+        <article class="card">
+          <div class="card-image">💡</div>
+          <div class="card-content">
+            <h3>Túnel de LED Infinity</h3>
+            <p>Um ambiente imersivo de luz, reflexos e movimento.</p>
+            <a class="btn" href="#led">Conhecer</a>
+          </div>
+        </article>
 
-        <div class="product-info">
-          <h3>Cabine Fotográfica Capa de Revista</h3>
-          <p>
-            A nossa Cabine Fotográfica Capa de Revista transforma qualquer celebração num momento inesquecível.
-            Com iluminação profissional e design de luxo, os seus convidados tiram fotos incríveis e dignas de capa,
-            garantindo o maior destaque e engajamento nas redes sociais.
-          </p>
+        <article class="card">
+          <div class="card-image">📸</div>
+          <div class="card-content">
+            <h3>Cabine de Fotos</h3>
+            <p>Registros divertidos e personalizados para seus convidados.</p>
+            <a class="btn" href="#cabine">Conhecer</a>
+          </div>
+        </article>
 
-          <ul class="details">
-            <li><strong>Categoria:</strong> Cabine Fotográfica</li>
-            <li><strong>Disponibilidade:</strong> Consulte pelo WhatsApp</li>
-            <li><strong>Pedido:</strong> Atendimento direto</li>
-          </ul>
-
-          <a class="btn btn-primary" href="https://wa.me/5512992032826?text=Olá!%20Tenho%20interesse%20na%20cabine%20de%20fotos." target="_blank">
-            Quero Alugar
-          </a>
-        </div>
-      </div>
-
-      <!-- PRODUTO 2: Cabine Espelho Infinito -->
-      <div class="product-card">
-        <div class="product-photo">
-          <img src="https://i.etsystatic.com/25182360/r/il/7b2520/6208625677/il_794xN.6208625677_mnbq.jpg" alt="Cabine Espelho Infinito">
-        </div>
-
-        <div class="product-info">
-          <h3>Cabine de Espelho Infinito</h3>
-          <p>
-            Crie a ilusão de um túnel de luzes sem fim no seu evento. Com luzes LED e um efeito tridimensional hipnotizante, 
-            o nosso Espelho Infinito garante fotos e vídeos espetaculares, transformando qualquer festa ou 
-            evento corporativo num cenário moderno e highly partilhável.
-          </p>
-
-          <ul class="details">
-            <li><strong>Categoria:</strong> Cabine Espelho Infinito</li>
-            <li><strong>Disponibilidade:</strong> Consulte pelo WhatsApp</li>
-            <li><strong>Pedido:</strong> Atendimento direto</li>
-          </ul>
-
-          <a class="btn btn-primary" href="https://wa.me/5512992032826?text=Olá!%20Tenho%20interesse%20na%20cabine%20Espelho%20infinito." target="_blank">
-            Quero Alugar
-          </a>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <section id="galeria">
-    <div class="container">
-      <div class="section-head">
-        <h2>Veja de perto</h2>
-        <p>Use estas imagens para mostrar diferentes ângulos, aplicações ou resultados do produto.</p>
-      </div>
-
-      <div class="showcase">
-        <figure><img src="https://images.pexels.com/photos/5716280/pexels-photo-5716280.jpeg" alt="Demonstração 1"></figure>
-        <figure><img src="https://www.clicksvipcabine.com.br/wp-content/uploads/2025/02/Cabine-de-fotos-capa-de-revista-2.webp" alt="Demonstração 2"></figure>
-        <figure><img src="https://i.etsystatic.com/25182360/r/il/7b2520/6208625677/il_794xN.6208625677_mnbq.jpg" alt="Demonstração 3"></figure>
+        <article class="card">
+          <div class="card-image">📂</div>
+          <div class="card-content">
+            <h3>Plataforma BALUM</h3>
+            <p>Seus registros organizados em uma área exclusiva.</p>
+            <a class="btn" href="#plataforma">Acessar</a>
+          </div>
+        </article>
       </div>
     </div>
   </section>
 
-  <section id="sobre" class="container">
-    <div class="about">
-      <div>
-        <div class="eyebrow" style="color:#aaa;">Sobre nós</div>
-        <h2>Um Pouco sobre nós.</h2>
-      </div>
+  <section id="led">
+    <div class="container product">
+      <div class="product-visual">∞</div>
 
       <div>
-        <p>
-          A Balum Entertainment transforma eventos em experiências inesquecíveis.
-          Oferecemos Túnel de LED Infinity e Cabine de Fotos combinando tecnologia,
-          diversão e experiências visuais para tornar cada momento ainda mais especial.
+        <div class="tag">EXPERIÊNCIA IMERSIVA</div>
+        <h2>Túnel de LED <span class="gradient">Infinity</span></h2>
+
+        <p class="muted">
+          Uma experiência visual futurista para criar registros marcantes
+          e transformar a entrada do seu evento em um momento especial.
         </p>
 
-        <a class="btn" style="border-color:#fff;color:#fff;"
-           href="https://wa.me/5512992032826?text=Olá!%20Vim%20pelo%20site." target="_blank">
-          Falar conosco
-        </a>
+        <div class="features">
+          <div class="feature">✨ Efeito visual</div>
+          <div class="feature">🎥 Vídeos</div>
+          <div class="feature">⚡ Estrutura profissional</div>
+          <div class="feature">🎉 Eventos</div>
+        </div>
+
+        <a class="btn whatsapp" href="#">Quero contratar</a>
+      </div>
+    </div>
+
+    <div class="container gallery">
+      <!-- Substitua estas imagens pelas fotos reais do seu produto -->
+      <img src="https://placehold.co/400x300/171426/c4a5ff?text=LED+Infinity"
+           alt="Demonstração do túnel de LED">
+      <img src="https://placehold.co/400x300/171426/c4a5ff?text=Galeria+LED"
+           alt="Galeria do túnel de LED">
+      <img src="https://placehold.co/400x300/171426/c4a5ff?text=Experiencia"
+           alt="Experiência visual">
+      <img src="https://placehold.co/400x300/171426/c4a5ff?text=Eventos"
+           alt="Túnel de LED em eventos">
+    </div>
+  </section>
+
+  <section id="cabine">
+    <div class="container product">
+      <div>
+        <div class="tag">REGISTRE OS MOMENTOS</div>
+        <h2>Cabine de <span class="gradient">Fotos</span></h2>
+
+        <p class="muted">
+          Uma cabine moderna para registrar sorrisos e criar lembranças
+          que seus convidados poderão guardar e compartilhar.
+        </p>
+
+        <div class="features">
+          <div class="feature">📷 Fotos</div>
+          <div class="feature">🎬 Vídeos e GIFs</div>
+          <div class="feature">🔗 Compartilhamento</div>
+          <div class="feature">🎨 Personalização</div>
+        </div>
+
+        <a class="btn whatsapp" href="#">Quero contratar</a>
+      </div>
+
+      <div class="product-visual">📸</div>
+    </div>
+  </section>
+
+  <section id="plataforma">
+    <div class="container">
+      <div class="section-title">
+        <div class="tag">ÁREA EXCLUSIVA</div>
+        <h2>Plataforma BALUM</h2>
+        <p>Entre para acessar os álbuns disponibilizados para sua conta.</p>
+      </div>
+
+      <div class="platform-box">
+        <h3>📂 Área do cliente</h3>
+        <p class="muted" style="margin: 10px 0 20px">
+          Acesse seus registros e lembranças do evento.
+        </p>
+
+        <button class="btn" id="loginButton">
+          🔵 Entrar com Google
+        </button>
+
+        <p class="muted" id="loginMessage"
+           style="margin-top:15px;font-size:13px">
+          A área de login precisa ser conectada a um sistema de autenticação.
+        </p>
       </div>
     </div>
   </section>
 
+  <section id="contato">
+    <div class="container">
+      <div class="section-title">
+        <div class="tag">FALE COM A BALUM</div>
+        <h2>Vamos criar algo inesquecível?</h2>
+        <p>Conte-nos sobre seu evento.</p>
+      </div>
+
+      <div class="contact-grid">
+        <div>
+          <h3>📱 WhatsApp</h3>
+          <p class="muted" style="margin-bottom:22px">
+            Fale com nossa equipe e solicite um orçamento.
+          </p>
+
+          <h3>📸 Instagram</h3>
+          <p class="muted" style="margin-bottom:22px">
+            Acompanhe as experiências da BALUM.
+          </p>
+
+          <h3>✉️ E-mail</h3>
+          <p class="muted">
+            Entre em contato para saber mais sobre nossos serviços.
+          </p>
+        </div>
+
+        <form class="contact-form" id="contactForm">
+          <h3>Solicite informações</h3>
+
+          <input id="nome" type="text"
+                 placeholder="Seu nome" required>
+
+          <input id="email" type="email"
+                 placeholder="Seu e-mail" required>
+
+          <textarea id="mensagem" rows="4"
+                    placeholder="Conte-nos sobre seu evento"
+                    required></textarea>
+
+          <button class="btn" type="submit">
+            Enviar pelo WhatsApp
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
 </main>
 
 <footer>
-  <div class="container footer-inner">
-    <span>© 2026 Balum Entertainment. Todos os direitos reservados.</span>
-    <span>Atendimento pelo WhatsApp</span>
+  <div class="container">
+    © <span id="year"></span> BALUM Entertainment.
+    Todos os direitos reservados.
   </div>
 </footer>
 
-<a class="whatsapp"
-   href="https://wa.me/5512992032826?text=Olá!%20Vim%20pelo%20site%20e%20quero%20saber%20mais."
-   target="_blank" aria-label="Falar pelo WhatsApp">W</a>
+<script>
+const WHATSAPP = "5512992032826";
+
+// Atualiza o ano automaticamente
+document.getElementById("year").textContent =
+  new Date().getFullYear();
+
+// Botões para contratar
+document.querySelectorAll(".whatsapp").forEach(button => {
+  button.href = "https://wa.me/" + WHATSAPP +
+    "?text=" + encodeURIComponent(
+      "Olá! Gostaria de saber mais sobre os serviços da BALUM Entertainment."
+    );
+  button.target = "_blank";
+  button.rel = "noopener noreferrer";
+});
+
+// Formulário: abre o WhatsApp com os dados preenchidos
+document.getElementById("contactForm").addEventListener(
+  "submit", function(event) {
+    event.preventDefault();
+
+    const nome = document.getElementById("nome").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const mensagem = document.getElementById("mensagem").value.trim();
+
+    const texto =
+      "Olá! Meu nome é " + nome +
+      ". Meu e-mail é " + email +
+      ".\n\nSobre meu evento: " + mensagem;
+
+    const url = "https://wa.me/" + WHATSAPP +
+      "?text=" + encodeURIComponent(texto);
+
+    window.open(url, "_blank", "noopener,noreferrer");
+  }
+);
+
+// Demonstração: não substitui um login Google real
+document.getElementById("loginButton").addEventListener(
+  "click", function() {
+    document.getElementById("loginMessage").textContent =
+      "O login Google ainda precisa ser configurado com Firebase Authentication.";
+  }
+);
+</script>
 
 </body>
 </html>
